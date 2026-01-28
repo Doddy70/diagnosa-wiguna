@@ -15,6 +15,7 @@ WorkingDirectory=/home/diagnosa.bengkelwiguna.com/public_html
 # Environment variables
 # Use the global path and include any other necessary paths
 Environment="PATH=/usr/local/bin:/usr/bin:/bin"
+EnvironmentFile=/home/diagnosa.bengkelwiguna.com/public_html/.env
 
 # Command to start Gunicorn
 ExecStart=/usr/local/bin/gunicorn --workers 3 --bind 127.0.0.1:8000 app:app
