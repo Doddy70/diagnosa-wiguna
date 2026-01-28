@@ -9,16 +9,15 @@ User=root
 Group=root
 
 # Root directory of the application
-# CHANGE THIS: path to where you uploaded the code
-WorkingDirectory=/home/diagnosa.wiguna.com/public_html
+# CHANGE THIS if your path is different from: /home/diagnosa.bengkelwiguna.com/public_html
+WorkingDirectory=/home/diagnosa.bengkelwiguna.com/public_html
 
 # Environment variables
-Environment="PATH=/home/diagnosa.wiguna.com/public_html/.venv/bin"
-# Load .env file automatically if gunicorn supports it, or rely on python-dotenv in code
+# Use the global path and include any other necessary paths
+Environment="PATH=/usr/local/bin:/usr/bin:/bin"
 
 # Command to start Gunicorn
-# CHANGE THIS: path to gunicorn in your virtualenv
-ExecStart=/home/diagnosa.wiguna.com/public_html/.venv/bin/gunicorn --workers 3 --bind 127.0.0.1:8000 app:app
+ExecStart=/usr/local/bin/gunicorn --workers 3 --bind 127.0.0.1:8000 app:app
 
 [Install]
 WantedBy=multi-user.target
