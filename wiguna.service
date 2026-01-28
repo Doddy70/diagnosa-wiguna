@@ -1,0 +1,24 @@
+[Unit]
+Description=Gunicorn instance to serve Wiguna Repair Agent
+After=network.target
+
+[Service]
+# User running the application
+# CHANGE THIS: 'root' might be okay, but a specific user is safer if available
+User=root
+Group=root
+
+# Root directory of the application
+# CHANGE THIS: path to where you uploaded the code
+WorkingDirectory=/home/diagnosa.wiguna.com/public_html
+
+# Environment variables
+Environment="PATH=/home/diagnosa.wiguna.com/public_html/.venv/bin"
+# Load .env file automatically if gunicorn supports it, or rely on python-dotenv in code
+
+# Command to start Gunicorn
+# CHANGE THIS: path to gunicorn in your virtualenv
+ExecStart=/home/diagnosa.wiguna.com/public_html/.venv/bin/gunicorn --workers 3 --bind 127.0.0.1:8000 app:app
+
+[Install]
+WantedBy=multi-user.target
