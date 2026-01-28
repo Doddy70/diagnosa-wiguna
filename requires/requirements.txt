@@ -1,0 +1,9 @@
+flask
+flask-cors
+requests
+langchain
+langchain-community
+langchain-openai
+faiss-cpu
+python-dotenv
+pymilvus
