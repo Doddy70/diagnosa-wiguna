@@ -3,7 +3,7 @@ flask==3.1.2
 flask-cors==6.0.2
 python-dotenv==1.2.1
 openai==2.16.0
-langchain==0.3.27
+langchain==0.3.30
 langchain-community==0.3.31
 langchain-openai==0.3.35
 pymilvus==2.6.7
