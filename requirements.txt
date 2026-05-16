@@ -10,6 +10,6 @@ pymilvus==2.6.7
 tiktoken==0.12.0
 pypdf==6.6.2
 tenacity==9.1.2
-requests==2.32.5
+requests==2.34.2
 pydantic==2.12.5
 gunicorn
